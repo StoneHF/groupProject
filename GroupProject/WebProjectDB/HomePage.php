@@ -1,7 +1,7 @@
 <?php
 session_start();
 include 'config/connn.php';
-include 'loginNavbar/loginNavbarr.php';
+include 'adminCheck/navbarCheck.php';
 
 $varMemberID = $_SESSION['fldMemberID'];
 
