@@ -2,42 +2,12 @@
 session_start();
 include 'config/connn.php';
 
-
-
 // validate input
 $varEmail = $_POST['email'];
 //validate input and encrypt password
 $varPassword = md5($_POST['password']);
 
 $sql = "SELECT * FROM `gnnwebsitedb`.`tbl_members` WHERE `fldEmail` = '".$varEmail."' AND `fldPassword` = '".$varPassword."'";
-
-// echo $sql;
-
-$memres = $mysqli -> query($sql);
-$row_count = $memres ->num_rows; // asking sql for the amount of rows
-
-// echo $row_count;
-
-echo "SQL query: " . $sql . "<br>";
-echo "Number of rows returned: " . $row_count . "<br>";
-
-if($row_count === 1)
-{
-    echo " Valid Login"; 
-    $_SESSION['member'] = "true";
-     header('Location: HomePage.php');
-}
-elseif ($row_count >= 2)
-{
-    echo " Dodgy Login ";
-
-}
-
-elseif($row_count === 0)
-{
-   // header('location: signup_form.php');
-   echo " Dodgy Login 2 ";
-}
 
 // Execute the SQL query and store the result in a variable
 $result = $mysqli->query($sql);
@@ -51,6 +21,23 @@ if ($result->num_rows > 0) {
     if (md5($_POST['password']) === $row['fldPassword']) {
         // The password is correct, so store the fldMemberID in the session
         $_SESSION['fldMemberID'] = $row['fldMemberID'];
+        $_SESSION['fldFirstname'] = $row['fldFirstname'];
+
+        // Check if the user is an admin
+        if ($row['isadmin'] == 1) {
+            $_SESSION['isadmin'] = $row['isadmin'];
+            // The user is an admin, so redirect them to the admin home page
+            header('Location: admin_home_page.php');
+            exit();
+        } else {
+            // The user is not an admin, so redirect them to the home page
+            header('Location: HomePage.php');
+            exit();
+        }
     }
 }
+
+// No rows were returned or the password did not match, so redirect back to the login page
+header('Location: login.php');
+exit();
 ?>
