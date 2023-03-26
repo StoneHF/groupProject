@@ -1,7 +1,7 @@
 <?php
   session_start();
   include 'config/connn.php';
-  include 'navbar/navbarr.php';
+  include 'adminCheck/navbarCheck.php';
 ?>
 
 <!DOCTYPE html>
