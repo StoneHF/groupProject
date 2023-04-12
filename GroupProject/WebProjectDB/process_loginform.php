@@ -26,6 +26,7 @@ if ($result->num_rows > 0) {
         // Check if the user is an admin
         if ($row['isadmin'] == 1) {
             $_SESSION['isadmin'] = $row['isadmin'];
+            $_SESSION['fldMemberID'] = $row['fldMemberID'];
             // The user is an admin, so redirect them to the admin home page
             header('Location: admin_home_page.php');
             exit();
@@ -38,6 +39,6 @@ if ($result->num_rows > 0) {
 }
 
 // No rows were returned or the password did not match, so redirect back to the login page
-header('Location: login.php');
+header('Location: loginn.php');
 exit();
 ?>
