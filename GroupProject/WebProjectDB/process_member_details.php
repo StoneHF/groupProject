@@ -1,7 +1,25 @@
 <?php
-
 session_start();
 include 'config/connn.php';
+
+
+
+// Check if the delete request was made
+if (isset($_POST['process_member_details'])) {
+  $id = $_SESSION['fldMemberID'];
+
+  // Delete the member with the specified ID
+  $query = "DELETE FROM `tbl_members` WHERE `fldMemberID` = $id";
+  $result = mysqli_query($mysqli, $query);
+
+  if ($result) {
+      // Redirect to the form page or display a message
+      header('Location: loginn_form.php');
+      exit;
+  } else {
+      echo "Error deleting record: " . mysqli_error($mysqli);
+  }
+}
 
 if(isset($_POST['new_username'])){
   $new_username = $_POST['new_username'];
