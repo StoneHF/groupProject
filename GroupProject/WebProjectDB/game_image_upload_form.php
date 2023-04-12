@@ -16,7 +16,7 @@ $varMemberID = $_SESSION['fldMemberID'];
 <head>
     <title>Image Upload Form</title>
     <style>
-      /* Add some styling to make the form look nice */
+      /* Add some styling to make the form look better */
       body {
         background-color: #eee;
         font-family: sans-serif;
@@ -65,6 +65,9 @@ $varMemberID = $_SESSION['fldMemberID'];
     </style>
   </head>
   <body>
+
+  <h2> Add upcoming games </h2>
+
   <form action="process_game_image_upload.php" method="post" enctype="multipart/form-data">
   <label for="title">Image Title:</label>
   <input type="text" name="title" id="title">
