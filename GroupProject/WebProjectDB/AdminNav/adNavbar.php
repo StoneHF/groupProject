@@ -8,7 +8,7 @@
 
 
 
-<title>Harry's Assignment Website</title>
+<title>GNNproject</title>
 <!--  BOOTSTRAP CSS CDN -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
 <link rel="stylesheet" href="css/bootstrap.css">
@@ -54,7 +54,7 @@
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#"> Gaming News Now GNN Admin</a>
+    <a class="navbar-brand" href="admin_home_page.php"> Gaming News Now GNN Admin</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -64,7 +64,10 @@
           <a class="nav-link active" aria-current="page" href="admin_home_page.php">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="game_image_upload_form.php">Add New Games</a>
+          <a class="nav-link active" aria-current="page" href="game_image_upload_form.php">Add New Upcoming Games</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="competition_image_upload_form.php">Add Games To Competition</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -117,7 +120,7 @@ if (isset($_SESSION['fldMemberID'])) {
 } else {
     // The fldMemberID session variable is not set, so the user is not logged in
     echo 'User is not logged in';
- //   header ('Location: loginn_form.php');
+    header ('Location: loginn_form.php');
 }
 ?>
 
