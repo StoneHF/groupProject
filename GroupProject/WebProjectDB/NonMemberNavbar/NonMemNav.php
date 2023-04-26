@@ -4,7 +4,7 @@
 <html lang="en">
 <head>
 
-
+<!-- navbar for non members -->
 
 <title>GNNproject</title>
 <!--  BOOTSTRAP CSS CDN -->
@@ -35,6 +35,12 @@
           <a class="nav-link active" aria-current="page" href="HomePage.php">Home Page</a>
         </li>
         <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="ForumPage.php">Forums</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="NewsPage.php">News</a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="competition_results_gallery.php"> Upcoming Games</a>
         </li>
         <li class="nav-item">
@@ -47,8 +53,6 @@
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
             <li><a class="dropdown-item" href="signup_form.php" target="_blank">Sign Up</a></li>
 			<li><a class="dropdown-item" href="loginn_form.php" target="_blank">Log In</a></li>
-            <li><a class="dropdown-item" href="contact.html" target="_blank">Contact Us</a></li>
-			<li><a class="dropdown-item" href="foq.html" target="_blank">FOQ</a></li>
           </ul>
         </li>
       </ul>
