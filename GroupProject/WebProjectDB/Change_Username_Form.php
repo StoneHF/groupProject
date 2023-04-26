@@ -7,6 +7,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet" type="text/css" href="css/projectWebsiteStyle.css">
   <style>
     /* Define the .form-center class for centering the form */
     .form-center {
