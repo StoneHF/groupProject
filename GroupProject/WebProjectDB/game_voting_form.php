@@ -1,6 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-
 <?php
 session_start();
 include 'config/connn.php';
@@ -14,8 +11,15 @@ if (!isset($_SESSION['fldMemberID'])) {
 
 ?>
 
+
+<!DOCTYPE html>
+<html lang="en">
+
+
+
 <html>
 <head>
+<link rel="stylesheet" type="text/css" href="css/projectWebsiteStyle.css">
   <style>
     /* Add a container element for the gallery items */
     .gallery-container {
@@ -90,10 +94,6 @@ if (!isset($_SESSION['fldMemberID'])) {
 
       $result = $mysqli->query($sql);
 
-      // handle errors in query execution
-      //if (!$result) {
-       // die("Error: " . $mysqli->error);
-     // }
 
       // check if there are any images to display
       if ($result->num_rows > 0) {
