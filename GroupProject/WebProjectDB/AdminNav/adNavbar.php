@@ -14,8 +14,7 @@
 <link rel="stylesheet" href="css/bootstrap.css">
 <!--  CUSTOM CSS -->
 
-<link rel="stylesheet" type="text/css" href="css/WebsiteStyle.css">
-
+<link rel="stylesheet" type="text/css" href="css/WebsiteStyle.css"> <!-- link to css style sheet -->
 
  <style>
  
@@ -52,9 +51,9 @@
 
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark"> <!-- create nav bar -->
   <div class="container-fluid">
-    <a class="navbar-brand" href="admin_home_page.php"> Gaming News Now GNN Admin</a>
+    <a class="navbar-brand" href="admin_home_page.php"> Gaming News Now GNN Admin</a> <!-- title on nav bar -->
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -62,6 +61,21 @@
       <ul class="navbar-nav">
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="admin_home_page.php">Home</a>
+        </li> <!-- each <li> is a thing you can click on in the navbar -->
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="AdminForumCreateForm.php">Add Forums</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="AdminNewsCreateForm.php">Add News</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="AdminForumDeleteForm.php">Delete Forum</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="AdminNewsDeleteForm.php">Delete News</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="AdminPostDeleteForm.php">Delete Post</a>
         </li>
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="game_image_upload_form.php">Add New Upcoming Games</a>
@@ -72,10 +86,9 @@
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             More
-          </a>
+          </a> <!-- this is a drop down bar -->
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
           <li><a id="logoutLink" class="dropdown-item" href="#logoutModal" data-toggle="modal">Logout</a></li> 
-			<li><a class="dropdown-item" href="foq.html" target="_blank">FOQ</a></li>
           </ul>
         </li>
       </ul>
@@ -86,7 +99,7 @@
 
 
 
-<!-- The modal container -->
+<!-- The logout modal container -->
 <div id="myModal" class="modal">
   <!-- Modal content -->
   <div class="modal-content">
