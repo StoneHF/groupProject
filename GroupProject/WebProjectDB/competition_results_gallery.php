@@ -1,14 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-
 <?php
 session_start();
 include 'config/connn.php';
 include 'adminCheck/navbarCheck.php';
 ?>
 
+<!DOCTYPE html>
+<html lang="en">
+
+
 <html>
 <head>
+<link rel="stylesheet" type="text/css" href="css/projectWebsiteStyle.css">
+
 <title>Competition Results Gallery</title>
   <style>
     .gallery {
