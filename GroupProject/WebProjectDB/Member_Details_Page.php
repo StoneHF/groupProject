@@ -8,7 +8,7 @@
 <html>
 <head>
 
-
+<link rel="stylesheet" type="text/css" href="css/projectWebsiteStyle.css">
 <link rel="stylesheet" type="text/css" href="CSS/DeleteAccountModal.css">
 
 <style>
