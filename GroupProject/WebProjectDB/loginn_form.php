@@ -1,23 +1,25 @@
+<?php
+// Start a PHP session and include necessary files
+session_start();
+include 'config/connn.php'; // include the database connection file
+include 'loginNavbar/loginNavbarr.php'; // include the login navigation bar
+?>
+
+<!-- The following is the DOCTYPE and HTML tag that define the document type and language -->
 <!DOCTYPE html>
 <html lang="en">
-<?php
-session_start();
-include 'config/connn.php';
-include 'loginNavbar/loginNavbarr.php';
-?>
 
 
 <head>
+<link rel="stylesheet" type="text/css" href="css/projectWebsiteStyle.css">
   <style>
-    /* Add any styling for the page here */
+    /* Add any custom CSS styling for the page here */
   </style>
 </head>
 
-
-<html>
-
   <body>
 
+  <!-- Start of the login form, using Bootstrap's CSS classes for styling -->
   <div class="container vh-100">
 		<div class="row justify-content-center h-100">
 			<div class="card w-50 my-auto shadow ">
@@ -25,6 +27,7 @@ include 'loginNavbar/loginNavbarr.php';
 				Sign in Here
 				</div>
 		<div class="card-body">
+			<!-- The form to be submitted to the process_loginform.php file -->
 			<form action="process_loginform.php" method="post">
 				<div class="form-group">
 					<label for="email">Email</label>
@@ -37,15 +40,14 @@ include 'loginNavbar/loginNavbarr.php';
 				<input type="submit" class="btn btn-primary w-100" value="Login" name="Login">
 			</form>
 			<div class="card-footer text-right">
-				<small>&copy;</small>
+				 <!-- This section can be used to add any additional information or links -->
+				<small></small>
 			</div>
 		</div>
 			</div>
 		</div>
 	</div>
 
-
-
-
  </body>
 </html>
+
