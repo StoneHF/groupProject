@@ -1,19 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
 <?php
-session_start();
-include 'config/connn.php';
-include 'adminCheck/navbarCheck.php';
-$varMemberID = $_SESSION['fldMemberID'];
- 
+session_start(); // start the session
+include 'config/connn.php'; // include database connection file
+include 'adminCheck/navbarCheck.php'; // include navbar checking file
+$varMemberID = $_SESSION['fldMemberID']; // get member ID from session
 ?>
 
-
-
+<!DOCTYPE html>
+<html lang="en">
 
 
 
 <head>
+<link rel="stylesheet" type="text/css" href="css/projectAdminWebsiteStyle.css">
     <title>Image Upload Form</title>
     <style>
       /* Add some styling to make the form look better */
@@ -66,11 +64,14 @@ $varMemberID = $_SESSION['fldMemberID'];
   </head>
   <body>
 
-  <h2> Add upcoming games </h2>
 
-  <form action="process_game_image_upload.php" method="post" enctype="multipart/form-data">
+   <!-- Add a heading for the form -->
+  <h2> Add upcoming games </h2>
+  
+<!-- Create the form for image upload -->
+<form action="process_game_image_upload.php" method="post" enctype="multipart/form-data">
   <label for="title">Image Title:</label>
-  <input type="text" name="title" id="title">
+  <input type="text" name="title" id="title" required>
   <br><br>
   <label for="fileToUpload">Select image to upload:</label>
   <input type="file" name="fileToUpload" id="fileToUpload">
@@ -85,10 +86,13 @@ $varMemberID = $_SESSION['fldMemberID'];
   <input type="checkbox" name="pc" id="pc" value="1">
   <br><br>
   <label for="releaseDate">Release Date:</label>
-  <input type="date" name="releaseDate" id="releaseDate">
+  <input type="date" name="releaseDate" id="releaseDate" required>
   <br><br>
+
+  <!-- Add a submit button for the form -->
   <input type="submit" value="Upload Image" name="submit">
 </form>
+
 
   </body>
 </html>
