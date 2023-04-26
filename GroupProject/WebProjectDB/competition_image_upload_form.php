@@ -1,5 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
 <?php
 session_start();
 include 'config/connn.php';
@@ -9,11 +7,14 @@ include 'AdminNav/adNavbar.php';
 ?>
 
 
+<!DOCTYPE html>
+<html lang="en">
 
 
 
 
 <head>
+<link rel="stylesheet" type="text/css" href="css/projectAdminWebsiteStyle.css">
     <title>Image Upload Form</title>
     <style>
       /* Add some styling to make the form look nice */
@@ -71,13 +72,13 @@ include 'AdminNav/adNavbar.php';
 
   <form action="process_game_competition.php" method="post" enctype="multipart/form-data">
   <label for="title">Image Title:</label>
-  <input type="text" name="title" id="title">
+  <input type="text" name="title" id="title" required>
   <br><br>
   <label for="fileToUpload">Select image to upload:</label>
   <input type="file" name="fileToUpload" id="fileToUpload">
   <br><br>
   <label for="releaseDate">Release Date:</label>
-  <input type="date" name="releaseDate" id="releaseDate">
+  <input type="date" name="releaseDate" id="releaseDate" required>
   <br><br>
   <input type="submit" value="Upload Image" name="submit">
 </form>
