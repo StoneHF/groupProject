@@ -39,6 +39,6 @@ if ($result->num_rows > 0) {
 }
 
 // No rows were returned or the password did not match, so redirect back to the login page
-header('Location: loginn.php');
+header('Location: loginn_form.php');
 exit();
 ?>
