@@ -16,6 +16,7 @@ if (isset($_SESSION['fldMemberID'])){
 <html>
 
 <head>
+<link rel="stylesheet" type="text/css" href="css/projectAdminWebsiteStyle.css">
     <style>
         #text-header{
             text-align: center;
@@ -24,7 +25,13 @@ if (isset($_SESSION['fldMemberID'])){
 </head>
 
 <body>
+
+
+
     <h1 id="text-header">Welcome, Admin! Please use the Navbar to navigate to Admin Pages...</h1>
+
+
+
 </body>
 
 </html>
