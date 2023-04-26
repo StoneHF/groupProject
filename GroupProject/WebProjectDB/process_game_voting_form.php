@@ -1,8 +1,8 @@
 <?php
-  // start a session
-  session_start();
-  include 'config/connn.php';
-  include 'adminCheck/navbarCheck.php';
+ob_start();
+session_start();
+include 'config/connn.php';
+include 'adminCheck/navbarCheck.php';
 
   // check if the form has been submitted
   if (isset($_POST['submit'])) {
@@ -54,10 +54,12 @@
 
     $stmt = $mysqli->prepare($sql);
     $stmt->execute();
-      
+
     // redirect the user back to the gallery page
-    header('Location: game_voting_form.php');
-    exit;
+header('Location: competition_results_gallery.php');
+exit;
+      
+ 
   }
 ?>
 
