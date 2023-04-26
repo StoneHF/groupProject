@@ -4,7 +4,7 @@
 <html lang="en">
 <head>
 
-
+<!-- this is the navbar for the login page -->
 
 <title>GNNproject</title>
 <!--  BOOTSTRAP CSS CDN -->
@@ -12,7 +12,6 @@
 <link rel="stylesheet" href="css/bootstrap.css">
 <!--  CUSTOM CSS -->
 <link rel="stylesheet" type="text/css" href="css/WebsiteStyle.css">
-
 
  <style>
  
@@ -43,9 +42,6 @@
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
           <li><a class="dropdown-item" href="logout_form.php" target="_blank">Logout</a></li>
-            <li><a class="dropdown-item" href="forum.html" target="_blank">Forum</a></li>
-            <li><a class="dropdown-item" href="contact.html" target="_blank">Contact Us</a></li>
-			<li><a class="dropdown-item" href="foq.html" target="_blank">FOQ</a></li>
           </ul>
         </li>
       </ul>
