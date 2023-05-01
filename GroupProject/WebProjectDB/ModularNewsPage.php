@@ -119,7 +119,7 @@ else{
     ?>
 
     <script type="text/javascript">
-        window.location.href="ForumPage.php";
+        window.location.href="NewsPage.php";
     </script>
 
     <?php
